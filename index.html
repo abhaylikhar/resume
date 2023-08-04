@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/e5b8e6f1e4.js" crossorigin="anonymous"></script>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js”></script>
+
+    
+</head>
+<body>
+    <div class="content main">
+       
+        <div class="left-section">
+           
+            <h2>CONTACT</h2>
+
+            <div class="ll"><a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa-solid fa-envelope"></i>&nbsp; abhaylikhar@gmail.com</a><br></div>
+            <div class="ll"><a href="#"><i class="fa-regular fa-id-badge"></i>&nbsp; 7354103040</a><br></div>
+            <div class="ll"><a href="#"><i class="fa-solid fa-location-dot"></i>&nbsp; 172 New Palasia</a><br></div>
+            <div class="ll"><a href="https://www.linkedin.com/in/abhay-likhar-ab432b247/"><i class="fa-brands fa-linkedin"></i>&nbsp; www.linkedin.com/in/abhay</a><br></div>
+
+            <h2>SKILLS</h2>
+            <ul class="nav-link">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>BOOTSTRAP</li>
+                <li>MATERIAL-UI</li>
+                <li>REACT JS</li>
+                <li>REDUX</li>
+                <li>CONTEXT</li>
+            </ul>
+
+
+            <h2>EDUCATION</h2>
+
+            <div class="ll">BE, Computer Science Engineering<br>
+                July 2015 to April 2019<br>
+                Astral Institute Of Technology
+            </div>
+
+            <h2>INTERSHIP & TRAINING</h2>
+
+            <div class="ll">
+                I have completed my frondend developer internship
+                from E-skill web services<br>
+                Jan 2023 to June 2023
+
+            </div>
+
+            
+            
+            
+            
+        </div>
+        <div class="right-section">
+            <div class="name">
+                <h1>Abhay Likhar</h1>
+                <p>FRONT END DEVELOPER</p>
+            </div>
+
+            <div class="sec">
+            <h2>PROFILE</h2>
+            <p>I am a dedicated and highly skilled
+                Frontend Developer with six
+                months of experience in designing
+                and developing captivating user
+                interfaces. Passionate about
+                creating seamless and engaging
+                web experiences
+            </p>
+
+            <h2>PROJECTS</h2>
+
+            <h4>QR Code Generator</h4>
+            <li><a href="https://qr-maker-eight.vercel.app/">https://qr-maker-eight.vercel.app/</a></li><br>
+            <h4>Quote App</h4>
+            <li><a href="https://qoute-app-website.netlify.app/">https://qoute-app-website.netlify.app/</a></li><br>
+            <h4>Weather App</h4>
+            <li><a href="https://abhaylikhar.github.io/Weather">https://abhaylikhar.github.io/Weather</a></li><br>
+            <h4>Prime vedio Design</h4>
+            <li><a href="https://abhaylikhar.github.io/prime3/">https://abhaylikhar.github.io/prime3/</a></li><br>
+            <h4>Netflix Design</h4>
+            <li><a href="https://abhaylikhar.github.io/netflix3/">https://abhaylikhar.github.io/netflix3/</a></li>
+
+
+            <h2>STRENGTH</h2>
+
+            <p>Treat everyone with respect ans great levels of understanding and place high importance on quality communication with patients, families and colleagues.
+            </p>
+
+            <h2>PERSONAL DETAILS</h2>
+
+            <p>Date of Birth : 15/02/1998<br>
+                Gender : Male<br>	
+                Nationality	: Hindu<br>	
+                Languages Known	: Hindi & English<br>	
+                Mother Tongue	: Hindi<br>
+                Fathers Name : Mr. Kamlesh Likhar<br>
+                </p>
+
+            <h2>DECLARATION</h2>
+            <P>I hereby declare that the details and information given above
+                are complete and true to the best of my knowledge.</P>
+       
+
+       
+
+       
+        </div>
+           
+
+        </div>
+    </div>
+
+    <button id="download-pdf">Download PDF</button>
+    <script>
+        document.getElementById('download-pdf')
+        .addEventListener('click', () => {
+            const element = document.getElementById('content');
+            const options = {
+                filename: 'GFG.pdf',
+                margin: 0,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { 
+                    unit: 'in', 
+                    format: 'letter', 
+                    orientation: 'portrait' 
+                }
+            };
+            html2pdf().set(options).from(element).save();
+        });
+    </script>
+</body>
+</html>
